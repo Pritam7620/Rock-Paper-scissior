@@ -1,9 +1,10 @@
 let arr = ["Rock", "Paper", "Scissors"];
 
-
 let usercount = 0;
-  let computercount = 0;
-  
+let computercount = 0;
+let Total_Round = 0;
+let drawcount = 0;
+
 function PlayGames(userchoice) {
   console.log(userchoice);
 
@@ -14,13 +15,15 @@ function PlayGames(userchoice) {
   let wins = "";
   let draw = "";
   
+
   if (
     (userchoice == "Rock" && ComputerChoice == "Scissors") ||
     (userchoice == "Paper" && ComputerChoice == "Rock") ||
     (userchoice == "Scissors" && ComputerChoice == "Paper")
   ) {
-    wins = "user Win 😎";
+    wins = "User Win 😎";
     usercount++;
+    Total_Round++;
   } else if (
     (userchoice == "Scissors" && ComputerChoice == "Rock") ||
     (userchoice == "Rock" && ComputerChoice == "Paper") ||
@@ -28,8 +31,11 @@ function PlayGames(userchoice) {
   ) {
     wins = "Computer Win 😒";
     computercount++;
+    Total_Round++;
   } else {
     draw = "Draw !😑";
+     Total_Round++;
+     drawcount++;
   }
 
   let won = document.getElementById("won");
@@ -50,4 +56,14 @@ function PlayGames(userchoice) {
   let Draw = document.getElementById("Draw");
 
   Draw.innerText = draw;
+
+  let round = document.getElementById("round");
+  round.innerText = "Round : " + Total_Round;
+
+  let draws = document.getElementById("draws");
+  draws.innerText = "Draw : "+ drawcount;
+
+  let play = document.getElementById("play");
+
+  
 }
