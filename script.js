@@ -14,7 +14,6 @@ function PlayGames(userchoice) {
 
   let wins = "";
   let draw = "";
-  
 
   if (
     (userchoice == "Rock" && ComputerChoice == "Scissors") ||
@@ -34,14 +33,13 @@ function PlayGames(userchoice) {
     Total_Round++;
   } else {
     draw = "Draw !😑";
-     Total_Round++;
-     drawcount++;
+    Total_Round++;
+    drawcount++;
   }
-
-
 
   let won = document.getElementById("won");
   won.innerText = wins;
+
   let userch = document.getElementById("userch");
   userch.innerText = "User Choice is : " + userchoice;
 
@@ -49,23 +47,19 @@ function PlayGames(userchoice) {
   Computerch.innerText = "Computer Choice is : " + ComputerChoice;
 
   let uWin = document.getElementById("uWin");
-
   uWin.innerText = "User Wins : " + usercount;
-  let cWin = document.getElementById("cWin");
 
+  let cWin = document.getElementById("cWin");
   cWin.innerText = "Computer Wins : " + computercount;
 
   let Draw = document.getElementById("Draw");
-
   Draw.innerText = draw;
 
   let round = document.getElementById("round");
   round.innerText = "Round : " + Total_Round;
 
   let draws = document.getElementById("draws");
-  draws.innerText = "Draw : "+ drawcount;
+  draws.innerText = "Draw : " + drawcount;
 
   let play = document.getElementById("play");
-
-  
 }

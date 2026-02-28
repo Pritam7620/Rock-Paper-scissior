@@ -21,6 +21,8 @@ font-family: Arial, Helvetica, sans-serif;
 padding: 20px 0;
 }
 
+/*--------------------------Result-cointainer-----------------------*/
+
 
 .result p{
   display: flex;
@@ -31,7 +33,19 @@ font-size: 30px;
 gap: 10px;
 }
 
+#Draw{
+  color: yellow;
+  margin-bottom: 16px;
+}
 
+#won{
+  color: green;
+  font-size: 40px;
+  font-weight: bolder;
+}
+
+
+/*----------------------------Choice----------------------------*/
 
 .choices{
 display: flex;
@@ -57,6 +71,8 @@ padding: 10px 0;
   transform: scale(0.8);
 }
 
+
+/*-------------------Count Devision---------------------*/
 .count{
   display: flex;
   flex-direction: column;
@@ -70,6 +86,8 @@ padding: 10px 0;
 font-size: 24px;
 }
 
+
+/*-------------------reset-----------------*/
 .reset{
   display: flex;
  justify-content: center;
@@ -93,16 +111,6 @@ margin-bottom: 20px;
 }
 
 
-#Draw{
-  color: yellow;
-  margin-bottom: 16px;
-}
-
-#won{
-  color: green;
-  font-size: 40px;
-  font-weight: bolder;
-}
 
 
 /*----------------------------round-------------------*/
